@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:places_proyecto/card_image.dart';
 import 'package:places_proyecto/gradient_back.dart';
+import 'package:places_proyecto/home_app_bar.dart';
 import 'package:places_proyecto/review_list.dart';
 import 'review.dart';
 import 'description_place.dart';
@@ -11,7 +12,7 @@ class MyHome extends StatelessWidget{
   Widget build(BuildContext context) {
     final description_place = Container(
       margin: EdgeInsets.only(
-          top: 50,
+          top: 350,
           left: 30,
           right: 30
       ),
@@ -37,17 +38,12 @@ class MyHome extends StatelessWidget{
 
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-            "My places"
-        ),
-      ),
       body: Stack(
         children: <Widget>[
-          CardImage("assets/images/uyuni.jpg")
-          //
+          listView,
+          HomeAppBar("Popular")
         ],
-      )
+      ),
     );
   }
 

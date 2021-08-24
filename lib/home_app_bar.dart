@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:places_proyecto/card_image_list.dart';
 import 'package:places_proyecto/gradient_back.dart';
 
 class HomeAppBar extends StatelessWidget{
@@ -8,30 +9,31 @@ class HomeAppBar extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    //TITULO
+    //titulo
     final titulo = Container(
       margin: EdgeInsets.only(
-        top:40,
+        top: 40,
         left: 30
-      )
+      ),
       child: Text(
-        textoTitulo,
-        style; TextStyle(
+          textoTitulo,
+        style: TextStyle(
           fontFamily: "Lato",
-          fontWeight: fontWeight.bold,
-        fontSize: 30,
-        color: Colors.white
+          fontWeight: FontWeight.bold,
+          fontSize: 20,
+          color: Colors.white
+        ),
       ),
-      ),
-    };
-    //appbar
+    );
+
+    //appBar
     final appBar = Stack(
-      children:<Widget> [
-        GradientBack()
-         titulo
+      children: <Widget>[
+          GradientBack(),
+        titulo,
+        CardImageList()
       ],
     );
     return appBar;
   }
-
 }
