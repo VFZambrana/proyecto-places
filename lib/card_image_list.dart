@@ -13,10 +13,10 @@ class CardImageList extends StatelessWidget {
         children: <Widget>[
           CardImage("assets/images/uyuni.jpg"),
           CardImage("assets/images/lugar.jpg"),
-          CardImage("assets/images/lugar1.jpg"),
           CardImage("assets/images/lugar2.jpg"),
           CardImage("assets/images/lugar3.jpg"),
           CardImage("assets/images/lugar4.jpg"),
+          CardImage("assets/images/lugar5.jpg"),
         ],
       ),
     );
